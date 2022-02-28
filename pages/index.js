@@ -1,18 +1,22 @@
 import React from "react";
 import Layout from '../components/Layout';
+import Section from '../components/Section';
 import Container from '@material-ui/core/Container';
-import Navbar from '../components/Navbar';
 import SliderTop from '../components/SliderTop';
-import Bookdata from '../components/Bookdata';
-
+import InfoCard from '../components/InfoCard';
 
 const home = () => <div>
   <Layout header="Home" title="Home page.">
     <SliderTop />
-    <Navbar />
     <Container>
-      <Bookdata number={ 3 } />
+      <Section title="BLOG" link="/" more="もっと見る">
+        <InfoCard />
+        <InfoCard />
+      </Section>
+      <Section title="TWITTER" link="/" more="もっと見る">
+        <a class="twitter-timeline" data-width="600" data-height="800" data-theme="light" href="https://twitter.com/moti_meron?ref_src=twsrc%5Etfw">Tweets by moti_meron</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </Section>
     </Container>
   </Layout>
 </div>
-export default home;
+export default home; 

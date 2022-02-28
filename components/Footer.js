@@ -42,7 +42,7 @@ class Footer extends Component {
                 <Grid item xs={ 12 } style={ logoBottom }>
                     <div class="logo">
                         <Link href="/">
-                            My Favorite book
+                            黒猫ノンちゃん
                         </Link>
                     </div>
                 </Grid>
