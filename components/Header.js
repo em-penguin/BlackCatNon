@@ -26,8 +26,8 @@ class Header extends Component {
                 <Grid item xs={ 8 } style={ logoTop }>
                     <div class="logo">
                         <Link href="/" class="logo">
-                            My Favorite book
-                    </Link>
+                            黒猫ノンちゃん
+                        </Link>
                     </div>
                 </Grid>
                 <Grid item xs={ 4 } style={ headContents }>
