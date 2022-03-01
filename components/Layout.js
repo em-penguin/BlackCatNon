@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Head from 'next/head'
+import Container from '@material-ui/core/Container';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import style from '../static/Style';
-
 
 class Layout extends Component {
 
@@ -22,8 +22,11 @@ class Layout extends Component {
                 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet" />
             </Head>
             { style }
-            <Header header={ this.props.header } />
-            { this.props.children }
+            <Header>
+                <Container>
+                    { this.props.children }
+                </Container>
+            </Header>
             <Footer footer="copyright" />
         </div>);
     }

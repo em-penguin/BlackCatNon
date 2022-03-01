@@ -1,40 +1,80 @@
-import React, { Component } from 'react';
-import Link from 'next/link';
-import Grid from '@material-ui/core/Grid';
+import React from 'react';
+import PropTypes from 'prop-types';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Fab from '@material-ui/core/Fab';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import Zoom from '@material-ui/core/Zoom';
+import Menu from '../components/Menu';
 
-class Header extends Component {
-    render() {
-        const head = {
-            backgroundColor: '#006d77ff',
-            padding: "15px",
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        position: 'fixed',
+        bottom: theme.spacing(2),
+        right: theme.spacing(2),
+    },
+}));
+
+function ScrollTop(props) {
+    const { children, window } = props;
+    const classes = useStyles();
+    // Note that you normally won't need to set the window ref as useScrollTrigger
+    // will default to window.
+    // This is only being set here because the demo is in an iframe.
+    const trigger = useScrollTrigger({
+        target: window ? window() : undefined,
+        disableHysteresis: true,
+        threshold: 100,
+    });
+
+    const handleClick = (event) => {
+        const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor');
+
+        if (anchor) {
+            anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-        const logoTop = {
-            display: "flex",
-            alignItems: "unset",
-            justifyContent: "start",
-            fontFamily: "Righteous, cursive",
-            fontSize: "20px",
-        }
-        const headContents = {
-            display: "flex",
-            justifyContent: "flex-end",
-            fontSize: "12px",
-            fontWeight: 700,
-        }
-        return (<header style={ head }>
-            <Grid container spacing={ 0 }>
-                <Grid item xs={ 8 } style={ logoTop }>
-                    <div class="logo">
-                        <Link href="/" class="logo">
-                            黒猫ノンちゃん
-                        </Link>
-                    </div>
-                </Grid>
-                <Grid item xs={ 4 } style={ headContents }>
-                    { this.props.header }
-                </Grid>
-            </Grid>
-        </header>);
-    }
+    };
+
+    return (
+        <Zoom in={ trigger }>
+            <div onClick={ handleClick } role="presentation" className={ classes.root }>
+                { children }
+            </div>
+        </Zoom>
+    );
 }
-export default Header;
+
+ScrollTop.propTypes = {
+    children: PropTypes.element.isRequired,
+    /**
+     * Injected by the documentation to work in an iframe.
+     * You won't need it on your project.
+     */
+    window: PropTypes.func,
+};
+
+export default function BackToTop(props) {
+    return (
+        <React.Fragment>
+            <CssBaseline />
+            <AppBar>
+                <Toolbar>
+                    <Menu />
+                    <Typography variant="h6">黒猫ノンちゃん</Typography>
+                </Toolbar>
+            </AppBar>
+            <Toolbar id="back-to-top-anchor" />
+            { props.children }
+            <ScrollTop { ...props }>
+                <Fab color="secondary" size="small" aria-label="scroll back to top">
+                    <KeyboardArrowUpIcon />
+                </Fab>
+            </ScrollTop>
+        </React.Fragment>
+    );
+}
