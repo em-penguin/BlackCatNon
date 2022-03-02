@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
-import Link from '@material-ui/core/Link';
+import Link from '../components/Link';
 
 class Section extends Component {
 
@@ -8,8 +7,8 @@ class Section extends Component {
         return (<div>
             <h2>{ this.props.title }</h2>
             { this.props.children }
-            <Link href={ this.props.link } onClick="">
-                <Button variant="outlined">{ this.props.more }</Button>
+            <Link link={ this.props.link } onClick="">
+                <div variant="outlined">{ this.props.more }</div>
             </Link>
         </div>);
     }

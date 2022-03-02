@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Head from 'next/head'
 import Container from '@material-ui/core/Container';
-import Header from '../components/Header';
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import style from '../static/Style';
 
@@ -22,11 +22,11 @@ class Layout extends Component {
                 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet" />
             </Head>
             { style }
-            <Header>
+            <Navbar>
                 <Container>
                     { this.props.children }
                 </Container>
-            </Header>
+            </Navbar>
             <Footer footer="copyright" />
         </div>);
     }
