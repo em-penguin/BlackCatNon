@@ -1,20 +1,27 @@
 import React from 'react';
-
+const infoCardStyle = {
+    padding: "1%"
+}
+const imgStyle = {
+    width: "100%"
+}
+const pStyle = {
+    padding: "1%"
+}
 function InfoCard(props) {
     return (
-        <div>
-            <div>
-                <img />
-            </div>
-            <div>
-                <h4>
-                    Lizard
-                </h4>
-                <p>
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
-                </p>
-            </div>
+        <div style={ infoCardStyle }>
+            <a href={ props.link }>
+                <img src={ props.img } style={ imgStyle } />
+                <div style={ pStyle }>
+                    <h4>
+                        { props.title }
+                    </h4>
+                    <p>
+                        { props.note }
+                    </p>
+                </div>
+            </a>
         </div>
     );
 };

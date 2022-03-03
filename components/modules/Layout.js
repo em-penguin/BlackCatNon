@@ -5,7 +5,6 @@ import Footer from '../block/Footer';
 import style from '../../static/Style';
 
 class Layout extends Component {
-
     render() {
         return (<div>
             <Head>
@@ -22,7 +21,7 @@ class Layout extends Component {
             </Head>
             { style }
             <Navbar>
-                    { this.props.children }
+                { this.props.children }
             </Navbar>
             <Footer footer="copyright" />
         </div>);
