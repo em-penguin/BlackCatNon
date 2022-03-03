@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from '../components/Layout';
-import Section from '../components/Section';
-import SliderTop from '../components/SliderTop';
-import InfoCard from '../components/InfoCard';
+import Layout from '../components/modules/Layout';
+import Section from '../components/atoms/Section';
+import SliderTop from '../components/modules/SliderTop';
+import InfoCard from '../components/atoms/InfoCard';
 
 const home = () => <div>
   <Layout title="Home page.">
