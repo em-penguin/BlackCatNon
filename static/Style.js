@@ -1,6 +1,5 @@
 import css from 'styled-jsx/css';
 
-
 export default <style>{ `
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -52,66 +51,76 @@ table{
 
 tr {
     margin:0px;
-  }
-  th {
-    font-size:14pt;
-    font-weight:plain;
-    text-align:left;
-    padding:0px 20px;
-    margin:0px;
-
-
-  }
-  td {
-    font-size:14pt;
-    font-weight:plain;
-    text-align:left;
-    padding:0px 20px;
-    margin:0px;
-  }
-  .label {
-    font-size:14pt;
-    margin:20px 5px;
-  }
-  .login {
-    text-align:right;
-  }
-  .account {
-    cursor:pointer;
-    font-size:12pt;
-    padding:5px 10px;
-    color:gray;
-    border:2px solid lightgray;
-  }
-  fieldset {
-    margin:0px 0px 30px 0px;
-  }
-  input {
-    border: 0px solid white;
-    border-bottom:1px solid gray;
-    font-size:14pt;
-  }
-  button {
-    font-size:14pt;
-    padding: 0px 20px;
-  }
-  li {
-    font-size:14pt;
-    cursor:pointer;
-  }
-  .slider div {
-    height: 300px;
-　}
-　.slider img {
-    width: 100%;
-　}
+}
+th {
+  font-size:14pt;
+  font-weight:plain;
+  text-align:left;
+  padding:0px 20px;
+  margin:0px;
+}
+td {
+  font-size:14pt;
+  font-weight:plain;
+  text-align:left;
+  padding:0px 20px;
+  margin:0px;
+}
+.label {
+  font-size:14pt;
+  margin:20px 5px;
+}
+.login {
+  text-align:right;
+}
+.account {
+  cursor:pointer;
+  font-size:12pt;
+  padding:5px 10px;
+  color:gray;
+  border:2px solid lightgray;
+}
+fieldset {
+  margin:0px 0px 30px 0px;
+}
+input {
+  border: 0px solid white;
+  border-bottom:1px solid gray;
+  font-size:14pt;
+}
+button {
+  font-size:14pt;
+  padding: 0px 20px;
+}
+li {
+  font-size:14pt;
+  cursor:pointer;
+}
 a {
   text-decoration: none;
 }
 .logo a{
   color: #FFF;
 }
-`}</style>;
+.slider div {
+  height: 200px;
+}
+.slider img {
+  width: 100%;
+}
+#index #blog{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap
+}
+#index section{
+  padding: 0 2%;
+}
+#index section:nth-child(odd){
+  background: #f5f5f5;
+}
+`}</style>
 
 // /* CSS HEX */
 // --ming 深い緑: #006d77ff;

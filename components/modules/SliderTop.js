@@ -5,7 +5,7 @@ export default function SliderTop() {
     const settings = {
         dots: false,
         infinite: false,
-        speed: 500,
+        speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,

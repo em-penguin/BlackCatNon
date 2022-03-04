@@ -20,9 +20,8 @@ class Layout extends Component {
                 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet" />
             </Head>
             { style }
-            <Navbar>
-                { this.props.children }
-            </Navbar>
+            <Navbar />
+            { this.props.children }
             <Footer footer="copyright" />
         </div>);
     }

@@ -15,15 +15,30 @@ class Section extends Component {
             border: "1px solid"
         }
         return (
-            <div>
-                <h2 style={ center }>{ this.props.title }</h2>
+            <section style={ center }>
+                <style jsx>
+                    { `
+                    @media only screen and (max-width:1024px) {
+                        section {
+                            margin: 0 2%;
+                        }
+                    }
+                    @media only screen and (min-width:1024px) {
+                        section {
+                            max-width: 1024px;
+                            margin: 0 auto;
+                        }
+                    }
+                    `}
+                </style>
+                <h2>{ this.props.title }</h2>
                 { this.props.children }
                 <Link link={ this.props.link } onClick="">
                     <div variant="outlined" style={ more }>
                         { this.props.more }
                     </div>
                 </Link>
-            </div>
+            </section>
         );
     }
 }

@@ -1,22 +1,29 @@
 import React from 'react';
-const infoCardStyle = {
-    padding: "1%"
-}
-const imgStyle = {
-    width: "100%"
-}
-const pStyle = {
-    padding: "1%"
-}
+
 function InfoCard(props) {
+    const infoCardStyle = {
+        margin: '1%',
+        width: '48%',
+        maxWidth: '300px'
+    }
+    const pStyle = {
+        padding: '4%',
+        textAlign: 'initial'
+    }
+    let _img = {
+        backgroundImage: 'url(' + props.img + ')',
+        backgroundSize: 'cover',
+        height: '100px',
+        backgroundPosition: 'center center'
+    }
     return (
         <div style={ infoCardStyle }>
             <a href={ props.link }>
-                <img src={ props.img } style={ imgStyle } />
+                <div style={ _img }></div>
                 <div style={ pStyle }>
-                    <h4>
+                    <h3>
                         { props.title }
-                    </h4>
+                    </h3>
                     <p>
                         { props.note }
                     </p>
