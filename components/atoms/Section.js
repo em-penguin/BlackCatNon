@@ -8,7 +8,7 @@ class Section extends Component {
         };
         const more = {
             textAlign: "center",
-            padding: "1%",
+            padding: "0.4em",
             width: "30%",
             minWidth: "150px",
             margin: "0 auto",
@@ -16,25 +16,10 @@ class Section extends Component {
         }
         return (
             <section style={ center }>
-                <style jsx>
-                    { `
-                    @media only screen and (max-width:1024px) {
-                        section {
-                            margin: 0 2%;
-                        }
-                    }
-                    @media only screen and (min-width:1024px) {
-                        section {
-                            max-width: 1024px;
-                            margin: 0 auto;
-                        }
-                    }
-                    `}
-                </style>
                 <h2>{ this.props.title }</h2>
                 { this.props.children }
                 <Link link={ this.props.link } onClick="">
-                    <div variant="outlined" style={ more }>
+                    <div style={ more }>
                         { this.props.more }
                     </div>
                 </Link>

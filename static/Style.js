@@ -1,6 +1,14 @@
 import css from 'styled-jsx/css';
 
 export default <style>{ `
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');
+
+:root {
+  --font-family: 'Raleway', sans-serif;
+  --background-gray: #f5f5f5;
+  --color-a: #444;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -31,24 +39,19 @@ blockquote:before, blockquote:after, q:before, q:after{
 	content:'';
 	content:none;
 }
- 
 :focus{
 	outline:0;
 }
- 
 ins{
 	text-decoration:none;
 }
 del{
 	text-decoration:line-through;
 }
- 
 table{
 	border-collapse:collapse;
 	border-spacing:0;
 }
-
-
 tr {
     margin:0px;
 }
@@ -98,9 +101,23 @@ li {
 }
 a {
   text-decoration: none;
+  color:var(--color-a);
+}
+a:hover {  
+  color:red;
 }
 .logo a{
   color: #FFF;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: var(--font-family);
+}
+h1{
+  font-size: 1.5em;
+}
+h2{
+  font-size: 2em;
+  margin-bottom: 0.6em;
 }
 .slider div {
   height: 200px;
@@ -108,18 +125,51 @@ a {
 .slider img {
   width: 100%;
 }
+@media screen and (max-width:799px) {
+  section {
+    padding: 1.8em 2%;
+  }
+  .InfoCard_class{
+    margin: 1%;
+    width: 48%;
+  }
+}
+@media screen and (min-width:650px) {
+  section{
+    padding: 2em 0;
+  }
+  section>div {
+    max-width: 635px;
+    margin : 0 auto;
+  }
+  .InfoCard_class{
+    margin: 5px 0;
+    max-width:  205px;
+  }
+}
+@media screen and (min-width:1024px) {
+  section{
+    padding: 2em 0;
+  }
+  section>div {
+    max-width: 1020px;
+    margin : 0 auto;
+  }
+  .InfoCard_class{
+    margin: 5px 0;
+    max-width: 330px;
+  }
+}
+section:nth-child(odd){
+  background: var(--background-gray);
+}
 #index #blog{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
-#index section{
-  padding: 0 2%;
-}
-#index section:nth-child(odd){
-  background: #f5f5f5;
-}
+
 `}</style>
 
 // /* CSS HEX */
