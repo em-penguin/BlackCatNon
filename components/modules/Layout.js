@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Head from 'next/head'
 import Navbar from '../modules/Navbar';
-import Footer from '../block/Footer';
+import Footer from './Footer';
 import style from '../../static/Style';
 
 class Layout extends Component {
@@ -19,8 +19,8 @@ class Layout extends Component {
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet" />
             </Head>
-            { style }
             <Navbar />
+            { style }
             { this.props.children }
             <Footer footer="copyright" />
         </div>);

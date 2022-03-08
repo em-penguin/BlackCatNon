@@ -1,9 +1,19 @@
 import React from 'react';
+import Logo from '../atoms/Logo.js';
 
-export default function BackToTop(props) {
+export default function BackToTop() {
     return (
         <React.Fragment>
-            <h1>黒猫ノンちゃん</h1>
+            <style jsx>{
+                `
+                header{
+                    margin:10px 0;
+                }
+                `
+            }</style>
+            <header>
+                <Logo />
+            </header>
         </React.Fragment>
     );
 }

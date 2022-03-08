@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Section extends Component {
     render() {
-        const center = {
+        const section = {
             textAlign: "center"
         };
         const more = {
@@ -15,12 +15,14 @@ class Section extends Component {
             border: "1px solid"
         };
         return (
-            <section style={ center }>
+            <section style={ section }>
                 <h2>{ this.props.title }</h2>
                 { this.props.children }
                 <a href={ this.props.link } onClick="">
                     <div style={ more }>
-                        { this.props.more }
+                        <p>
+                            { this.props.more }
+                        </p>
                     </div>
                 </a>
             </section>

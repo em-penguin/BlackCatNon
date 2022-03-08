@@ -1,9 +1,12 @@
 import React from 'react';
 
 function InfoCard(props) {
-    const pStyle = {
-        padding: '4%',
+    const fontStyle = {
+        padding: '0.6em',
         textAlign: 'initial'
+    }
+    const pStyle = {
+        marginTop: '0.4em'
     }
     let _img = {
         backgroundImage: 'url(' + props.img + ')',
@@ -15,11 +18,11 @@ function InfoCard(props) {
         <div class="InfoCard_class">
             <a href={ props.link }>
                 <div style={ _img }></div>
-                <div style={ pStyle }>
+                <div style={ fontStyle }>
                     <h3>
                         { props.title }
                     </h3>
-                    <p>
+                    <p style={ pStyle }>
                         { props.note }
                     </p>
                 </div>

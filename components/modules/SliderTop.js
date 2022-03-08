@@ -18,8 +18,9 @@ export default function SliderTop() {
     }
     return (
         <Slider { ...settings }>
-            <img src={ "./static/img/topSlider01.jpg" } style={ sliderTopImg }></img>
-            <img src={ "./static/img/topSlider02.jpg" } style={ sliderTopImg }></img>
+            <img src={ "./static/img/slide/topSlider00.jpg" } style={ sliderTopImg }></img>
+            <img src={ "./static/img/slide/topSlider01.jpg" } style={ sliderTopImg }></img>
+            <img src={ "./static/img/slide/topSlider02.jpg" } style={ sliderTopImg }></img>
         </Slider>
     );
 }

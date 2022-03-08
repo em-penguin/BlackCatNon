@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
-import Link from '../atoms/Link';
 
-function NavList(props) {
+function NavList() {
     return (
-        <div>
-            <Link link="/about" title="about" />
-            <Link link="/search" title="search" />
-            <Link link="/book" title="book" />
-            <Link link="/favorite" title="favorite" />
+        <div className='NavList'>
+            <style jsx>{
+                `
+                .NavList{
+                    display:flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                `
+            }</style>
+            <a href="/about">ABOUT</a>
+            <a href="/blog">BLOG</a>
+            <a href="/https://moti-meron.booth.pm/">ONLINE SHOP</a>
+            <a href="/contact">CONTACT</a>
         </div>
     );
 }

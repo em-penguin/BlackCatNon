@@ -1,6 +1,6 @@
 import css from 'styled-jsx/css';
 
-export default <style>{ `
+export default <style jsx>{ `
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');
 
 :root {
@@ -119,11 +119,20 @@ h2{
   font-size: 2em;
   margin-bottom: 0.6em;
 }
+h3{
+  font-size:1em;
+}
+p{
+  font-size:0.8em;
+}
 .slider div {
   height: 200px;
 }
 .slider img {
   width: 100%;
+}
+.InfoCard_class{
+  background: #FFF;
 }
 @media screen and (max-width:799px) {
   section {
