@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Link from '../atoms/Link';
 
 class Section extends Component {
     render() {
@@ -12,17 +11,18 @@ class Section extends Component {
             width: "30%",
             minWidth: "150px",
             margin: "0 auto",
+            marginTop: "0.6em",
             border: "1px solid"
-        }
+        };
         return (
             <section style={ center }>
                 <h2>{ this.props.title }</h2>
                 { this.props.children }
-                <Link link={ this.props.link } onClick="">
+                <a href={ this.props.link } onClick="">
                     <div style={ more }>
                         { this.props.more }
                     </div>
-                </Link>
+                </a>
             </section>
         );
     }
