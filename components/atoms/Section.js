@@ -11,7 +11,7 @@ class Section extends Component {
             width: "30%",
             minWidth: "150px",
             margin: "0 auto",
-            marginTop: "0.6em",
+            marginTop: "1em",
             border: "1px solid"
         };
         return (

@@ -3,28 +3,30 @@ import React, { Component } from 'react';
 class Container extends Component {
     render() {
         return (
-            <div class="container">
+            <div className="Container">
                 <style jsx>
                     { `
-                    .container:nth-child(odd) {
-                        background: #f5f5f5;
+                    @media screen and (max-width:799px) {
+                        .Container {
+                          padding: 0 2%;
+                          text-align: center;
+                        }
                     }
                     @media only screen and (max-width:1023px) {
-                        .container_child{
-                            padding: 0 2%;
+                        .Container {
+                          max-width: 635px;
+                          margin : 0 auto;
                         }
                     }
                     @media only screen and (min-width:1024px) {
-                        .container_child{
+                        .Container {
                             max-width: 1024px;
                             margin: 0 auto;
                         }
                     }
                     `}
                 </style>
-                <div class="container_child">
-                    { this.props.children }
-                </div>
+                { this.props.children }
             </div>);
     }
 }

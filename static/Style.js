@@ -139,8 +139,11 @@ p{
     padding: 1.8em 2%;
   }
   .InfoCard_class{
-    margin: 1%;
-    width: 48%;
+    margin: 0.5%;
+    width: 49%;
+  }
+  .PhotoCard{
+    width: 50%;
   }
 }
 @media screen and (min-width:650px) {
@@ -151,9 +154,9 @@ p{
     max-width: 635px;
     margin : 0 auto;
   }
-  .InfoCard_class{
-    margin: 5px 0;
-    max-width:  205px;
+  .InfoCard_class,
+  .PhotoCard{
+    width:  33.3%;
   }
 }
 @media screen and (min-width:1024px) {
@@ -164,15 +167,19 @@ p{
     max-width: 1020px;
     margin : 0 auto;
   }
-  .InfoCard_class{
-    margin: 5px 0;
-    max-width: 330px;
+  .InfoCard_class,
+  .PhotoCard{
+    width: 340px;
   }
 }
 section:nth-child(odd){
   background: var(--background-gray);
 }
-#index #blog{
+footer>div>div{
+  margin-bottom: 1em;
+}
+#index #blog,
+#index #shop{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NavList from '../block/NavList';
 import Logo from '../atoms/Logo.js';
+import Container from '../atoms/Container.js';
 
 export default function Footer() {
     return (
@@ -8,15 +9,17 @@ export default function Footer() {
             <style jsx>{
                 `
                 footer{
-                    background: #FFF;
+                    background: #fff;
                     text-align: center;
                     padding-top: 30px;
                     padding-bottom: 50px;
                 }
                 `
             }</style>
-            <Logo />
-            <NavList />
+            <Container>
+                <Logo />
+                <NavList />
+            </Container>
         </footer>
     );
 }

@@ -3,6 +3,7 @@ import Layout from '../components/modules/Layout';
 import Section from '../components/atoms/Section';
 import SliderTop from '../components/modules/SliderTop';
 import InfoCard from '../components/atoms/InfoCard';
+import PhotoCard from '../components/atoms/PhotoCard';
 
 const home = () => <div id="index">
   <Layout title="Home page.">
@@ -53,11 +54,42 @@ const home = () => <div id="index">
       </div>
     </Section>
     <Section title="ONLINE SHOP" link="https://moti-meron.booth.pm/" more="ONLINE SHOP">
-      <p>各種グッズ販売中</p>
+      <div id="shop">
+        <PhotoCard
+          link="/"
+          img="../static/img/shop/01.png"
+          note="お気に入りのお布団でスヤスヤしているノンちゃん"
+        />
+        <PhotoCard
+          link="/"
+          img="../static/img/shop/02.png"
+          note="お気に入りのお布団でスヤスヤしているノンちゃん"
+        />
+        <PhotoCard
+          link="/"
+          img="../static/img/shop/03.png"
+          note="お気に入りのお布団でスヤスヤしているノンちゃん"
+        />
+        <PhotoCard
+          link="/"
+          img="../static/img/shop/04.png"
+          note="お気に入りのお布団でスヤスヤしているノンちゃん"
+        />
+        <PhotoCard
+          link="/"
+          img="../static/img/shop/05.png"
+          note="お気に入りのお布団でスヤスヤしているノンちゃん"
+        />
+        <PhotoCard
+          link="/"
+          img="../static/img/shop/06.png"
+          note="お気に入りのお布団でスヤスヤしているノンちゃん"
+        />
+      </div>
     </Section>
     <Section title="TWITTER" link="https://twitter.com/moti_meron" more="もっと見る">
       <a class="twitter-timeline" data-width="600" data-height="600" data-theme="light" href="https://twitter.com/moti_meron?ref_src=twsrc%5Etfw">Tweets by moti_meron</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </Section>
-  </Layout>
+  </Layout >
 </div >
 export default home; 
