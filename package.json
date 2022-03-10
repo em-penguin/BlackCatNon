@@ -1,7 +1,11 @@
 {
+    "name": "blackcatnon",
+    "homepage": "http://motilove.html.xdomain.jp/",
+    "version": "0.1.0",
+    "private": true,
     "scripts": {
         "dev": "next",
-        "build": "next build",
+        "build": "next build && next export",
         "start": "next start",
         "export": "next export"
     },

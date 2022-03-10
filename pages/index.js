@@ -6,7 +6,7 @@ import InfoCard from '../components/atoms/InfoCard';
 import PhotoCard from '../components/atoms/PhotoCard';
 
 const home = () => <div id="index">
-  <Layout title="Home page.">
+  <Layout title="黒猫ノンちゃん Official Site">
     <SliderTop />
     <Section title="ABOUT" link="./about" more="もっと見る">
       <p>黒猫ノンちゃんについて
