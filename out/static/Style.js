@@ -25,6 +25,7 @@ table, caption, tbody, tfoot, thead, tr, th, td{
 	font-size: 100%;
 	vertical-align: baseline;
 	background: transparent;
+  font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
 }
 body{
 	line-height:1;

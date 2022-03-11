@@ -18,7 +18,7 @@ const home = () => <div id="index">
         <InfoCard
           link="/"
           img="../static/img/cards/01.jpg"
-          title="段ボールがお気に入り"
+          title="段ボールが好き"
           note="角にアゴを乗せて寝るのが最近のお気に入りです"
         />
         <InfoCard
